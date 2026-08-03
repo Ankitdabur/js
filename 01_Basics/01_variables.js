@@ -1,7 +1,7 @@
 const accountId = 19821
 let accountEmail = "ankit@gmail.com"
 var accountPass = "1234"
-// not recommended. just for knowledge that we can do this 
+// not recommended. just for knowledge that we can do this also
 accountCity = "Jaipur"   
 let accountState;
 

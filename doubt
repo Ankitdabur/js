@@ -1,0 +1,10 @@
+// new
+// 03_objects  1 doubt
+// new use krne ke baad string object bn gyi does this means ab same refrence pass hoga??
+// let str = new String("Ankit")
+// console.log(typeof str)
+// let str2 = str
+// str2 = "Yadav"
+// console.log(str)
+// console.log(str2)
+
