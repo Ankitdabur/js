@@ -1,4 +1,4 @@
-//  all are in same data typ.. so it will run
+//  all are in same data type.. so it will run
 // console.log(2>1)
 // console.log(2<1)
 // console.log(2==1)

@@ -10,7 +10,7 @@ let isLoggedIn = false
 /*
 number => 2^53
 bigint 
-string => ""
+string => "" 
 boolean => true/false
 null => stand alone value
 undefined

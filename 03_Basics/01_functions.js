@@ -44,8 +44,8 @@ function calculateCartPrice(...num1){
 function calculateCartPrice2(var1 , var2 , ...num1){
     return num1  //return a array which contain all parameter 
 }
-// console.log(calculateCartPrice(200,300,400,500,600))
-// console.log(calculateCartPrice2(200,300,400,500,600))  //[400,500,600]
+console.log(calculateCartPrice(200,300,400,500,600))
+console.log(calculateCartPrice2(200,300,400,500,600))  //[400,500,600]
 
 
 // passing the object as parameter in functions 
@@ -60,7 +60,7 @@ function handleObject(anyobj){
 
 // handleObject(user)  1st way (pass any object)
 handleObject({
-    username : "Sonal",             //pass the object by manullay giving the data
+    username : "Ankit",             //pass the object by manullay giving the data
     price : "10000",
 })
 

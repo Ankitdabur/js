@@ -47,7 +47,6 @@ console.log(college.trim())
 
 //     REPLACE  
 let url = "http://ankit.com/ankit%20yadav"
-// REPLACE
 console.log(url.replace('%20' , '-'))
 
 

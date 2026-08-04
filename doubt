@@ -8,3 +8,8 @@
 // console.log(str)
 // console.log(str2)
 
+function me(){
+    return {username : "hii"}
+}
+console.log('hii')
+

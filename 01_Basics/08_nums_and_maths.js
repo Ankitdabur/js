@@ -8,7 +8,7 @@ const score = new Number(100)   // it help you to predefine that the variable is
 // console.log(score.toString().length) //3
 
 //  toFixed
-//  precision value large hai tb use krte hai. Like 98.23836638 => (2) =>
+//  precision value large hai tb use krte hai. Like 98.23836638 => (2) => 98.24
 // console.log(score.toFixed(2)) //100.00
 
 //   toPrecision(n)
