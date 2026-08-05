@@ -32,7 +32,7 @@ console.log(anotherstring)
 
 //       SLICE
 // We can use negative value also and negative means start from end
-let anotherstring2 = string2.slice(-3,4)
+let anotherstring2 = string2.slice(-1,4)
 console.log(anotherstring2)
 
 

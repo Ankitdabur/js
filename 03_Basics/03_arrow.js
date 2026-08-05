@@ -4,7 +4,7 @@
 // 'this' refers to the current object from which the method is called.
 // this.username -> accesses the username property of the current object.
 
-// console.log(this);  Prints the entire current object.
+// console.log(this);  inside the object ,Prints the entire current object.
 const user = {
     username : "ankit",                                        
     price : "999",

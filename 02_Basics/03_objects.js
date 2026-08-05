@@ -9,7 +9,7 @@ const user = {
    name : "Ankit" , //by default name => "name" this will happen automatically
    "full name" : "Ankit Yadav",
    mysym : "mykey1",     //mysym symbol ki tarah use nhi hora. 
-   [mysym2] : 123,  // ye symbol is tarah use hora hai ab
+   [mysym2] : 123,  // ye symbol is tarah use ho raha hai ab
    age : 19,
    location : "Narnaul",
    email : "ankit@gmail.com",
