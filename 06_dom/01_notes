@@ -33,7 +33,6 @@ document.getElementById("title").className  //return the class //class => error
 
 // getAttribute()
 // Gets the value of an attribute.
-
 document.getElementById("title").getAttribute("id"); //title
 document.getElementById("title").getAttribute("class"); //'heading'
 
@@ -101,7 +100,7 @@ mytempli[0].style.colour = "green"
 // using forEach 
 mytempli.forEach((li) => li.style.colour = "green") //turn all text color green of all 3 list
 
-//HTMLCollection(can not use any loop on this)
+//HTMLCollection(arraylike hota hai,can not use any loop on this)
 const tempClassList = document.getElementsByClassName("list-item") //return a HTMLCollection containg all items which have class name "list-item"
 
 //coverting HTMLCollection TO ARRAY (so we can apply loops)

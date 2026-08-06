@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+
+    //some properties of parent
+    // console.log(parent);  //it will print parent class
+
+    //children property
+    // console.log(parent.children); //it will return HTMLCollection having all child
+    // console.log(parent.children[1].innerHTML);
+
+    // for(let i = 0 ;i<parent.children.length ; i++){
+    //       console.log(parent.children[i].innerHTML)
+    // }
+
+    // parent.children[0].style.color = "green"
+
+    // console.log(parent.firstElementChild); //return the first child class
+    // console.log(parent.lastElementChild); //return the last child class
+
+    //from child to parent
+    const dayOne = document.querySelector(".day")
+    // console.log(dayOne) //print the first child
+    // console.log(dayOne.parentElement) //it will give the whole parent class
+     
+    //from one child to his sibling
+    // console.log(dayOne.nextElementSibling) //returns the next sibling element
+    
+// childNodes
+// Returns all child nodes of an element.
+// Includes element nodes, text nodes (spaces/new lines), and comment nodes.
+// Returns a NodeList.
+
+// console.log(parent.childNodes) //11
+// console.log(parent.childNodes[3])
+// console.log(parent.childNodes[3].textContent)
+
+
+</script>
+</html>

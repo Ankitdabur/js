@@ -1,0 +1,44 @@
+//CREATING A NEW ELEMENT
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+
+//creating a element
+const div = document.createElement('div') 
+// console.log(div) //rn its empty but created
+
+div.className = "main"
+div.id = Math.round(Math.random()*10+1) //some attribute(class,id) are by default so we can add them like this
+
+// div.setAttribute("" , "") (we have to use this for custom attributes)
+//always prefer setAttribute in place of .className , .id kyuki ismein 2 round and set mein only one
+div.setAttribute("title" , "generated title")
+
+div.style.backgroundColor = "green"
+div.padding = "10px"
+
+// div.innerText = "ANKIT THE GREAT" //same
+const addText = document.createTextNode("ANKIT THE GREAT") //same 
+div.appendChild(addText)
+
+//this element is in memory. it will not shown up on the page. 
+// for that we have to attach this child to the document
+
+// attaching this child
+document.body.appendChild(div)
+
+ 
+
+
+</script>
+</html>
