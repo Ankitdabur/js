@@ -1,5 +1,5 @@
 //reduce
-//self maden terms of reduce accumulator,current value(from array) , intial value
+//self made terms of reduce accumulator,current value(from array) , intial value
 
 const myNums = [1,2,3]
 // const myTotal = myNums.reduce( function(acc,currval) {

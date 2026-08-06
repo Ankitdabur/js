@@ -1,0 +1,112 @@
+//print all content..hidden also
+//title.textContent 
+
+//only print visible content
+//title.innerText
+
+// textContent -> Text only
+// innerText   -> Visible text only
+// innerHTML   -> HTML + Text (can read/write HTML tags)
+//title.innerHTML
+
+//query selector
+document.querySelector('#title');    // Returns the element with id="title"
+
+document.querySelector('.heading');  // Returns the first element with class="heading"
+
+document.querySelector('h2');        // Returns the first <h2> element
+
+// *********************************************************************************
+// document
+// Represents the whole HTML page.
+// Used to access HTML elements.
+
+console.log(document);
+
+// getElementById()
+// Finds an element using its id.
+// Returns one element or null.
+
+document.getElementById("title");
+document.getElementById("title").id;  //return id...title
+document.getElementById("title").className  //return the class //class => error 
+
+// getAttribute()
+// Gets the value of an attribute.
+
+document.getElementById("title").getAttribute("id"); //title
+document.getElementById("title").getAttribute("class"); //'heading'
+
+
+// setAttribute()
+// Adds or changes an attribute.
+document.getElementById("title").setAttribute("class", "test heading ");
+
+const title = document.getElementById("title")
+title // => stores the HTML element with id="title"
+
+//style
+// Changes CSS using JavaScript.
+
+title.style.color = "red"; //change the element colour to red
+title.style.backgroundColor = "yellow";
+title.padding = "15px" //kind of background colour width
+title.borderRadius = "20px"
+
+// innerText
+// Gets only the visible text.
+// Ignores hidden text.
+title.innerText
+
+//textContent
+//return all the content hidden+visible
+title.textContent
+
+// innerHTML
+// Can read and write HTML tags.
+title.innerHTML
+//output => 'DOM learning on Chai aur code<span style="display : none;">test text</span>\n '
+
+
+//getElementByClassName
+document.getElementsByClassName('heading') //return HTMLCollection
+
+// querySelector()
+// Finds the first matching element.
+// "#id"    -> id
+// ".class" -> class
+// "tag"    -> tag name
+// "h1"  -> heading
+
+const heading = document.querySelector("#title");
+
+//ul => item background colour change
+//4 list item
+//one ,two , three , four
+const myul = document.querySelector("ul")
+const myli = myul.querySelector("li")
+myli.style.backgroundColor = "green"
+myli.style.padding = "10px"
+
+myli.innerText = "five" //change the text from one to five
+
+// querySelectorAll()
+// Finds all matching elements.
+// Returns a NodeList.
+
+const mytempli = document.querySelectorAll("li");  //return a Nodelist which contain all ki items
+mytempli.style.colour = "green" // error
+mytempli[0].style.colour = "green"
+
+// using forEach 
+mytempli.forEach((li) => li.style.colour = "green") //turn all text color green of all 3 list
+
+//HTMLCollection(can not use any loop on this)
+const tempClassList = document.getElementsByClassName("list-item") //return a HTMLCollection containg all items which have class name "list-item"
+
+//coverting HTMLCollection TO ARRAY (so we can apply loops)
+Array.from(tempClassList)
+const myConvertedArray = forArray(tempClassList)
+//now we can apply forEach,map etch properties
+
+
