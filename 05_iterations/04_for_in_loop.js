@@ -8,7 +8,7 @@ const myObj = {
     rb : "ruby"
 }
 
-for (const key in myObj) {
+for (const key in myObj){
     // console.log(`${key} is the shortcut of ${myObj[key]}`)
 }
 

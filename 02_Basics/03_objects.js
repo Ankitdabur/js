@@ -41,5 +41,5 @@ user.greeting= function(){            //can use any valid name in place of greet
 user.greeting2= function(){
     console.log("Yadav")
 }
-console.log(user.greeting())
-console.log(user.greeting2())
+// console.log(user.greeting())
+// console.log(user.greeting2())

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+//not a good approch because ismein hamein features kam milte hai
+// document.getElementById("owl").onclick = function(){
+//     alert("clicked on owl")                       
+// }
+
+//better
+// document.getElementById("owl").addEventListener("click",function(){
+//     alert("owl clicked")
+// })
+
+//jQuery =>framework , in which .on do same work as addlistner
+
+// event object 
+// study on these topics in event
+// type, timeStamp, defaultPrevented
+// target, toElement, srcElement,currentTarget
+// clientX , clientY, screenX, screenY
+//by event we can know that special keys like altkey, ctrlkey etc. pressed or not
+
+// e.type
+// Tells the type of event that occurred.
+// console.log(e.type);
+
+// e.timeStamp
+// Gives the event's timestamp.
+//You can use it to understand when events occurred relative to each other.
+// It is measured in milliseconds relative to the relevant time origin.
+
+// e.defaultPrevented
+// tells whether preventDefault() has been called
+
+// e.preventDefault()
+// prevents the browser's default action
+
+// e.target
+// Element on which the event originally occurred.
+
+// e.currentTarget
+// The element whose event listener is currently executing.
+
+// clientX / clientY
+// coordinates relative to the browser viewport
+
+// screenX / screenY
+// coordinates relative to the physical screen
+
+addEventListener("",function(){},false) 
+// false : event bubling (by default) => inside → outside
+// true  : event capturing => outside -> inside
+//document.getElementById("images").addEventListener("click",function(e){
+//     console.log("image is clicked");
+//  },false)  //addlistner on parent element 
+
+//document.getElementById("owl").addEventListener("click",function(e){
+//     console.log("owl is clicked");
+//     e.stopPropagation() //ab event bubble hokr upr ke element pr nhi jaayega
+//  },false)  //addlistner on child
+
+// // both false => first child then parent(by default bhi yahi)
+// // both true => first parent called then child
+
+//const google = document.getElementById("google")
+//google.addEventListener("click",function(e){
+//e.preventDefault()
+//e.stopPropagation()
+// },false)
+
+//image =>parentnode (li)        li=> parentnode(ul)
+document.querySelector("#images").addEventListener("click" , function(e){
+    //console.log(e.target.parentNode) //give the <li>
+    //let removeIt = e.target.parentNode   //agr li pr click krdiya toh sab ud jaayega
+    //removeIt.remove()
+    console.log(e.target.tagName) 
+    //Solving : agr li pr click krdiya toh sab ud jaayega 
+    if(e.target.tagName === 'IMG'){
+        let removeIt = e.target.parentNode   
+         removeIt.remove() 
+    }     
+})
+
+
+</script>
+</html>
