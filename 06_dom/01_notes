@@ -104,8 +104,8 @@ mytempli.forEach((li) => li.style.colour = "green") //turn all text color green 
 const tempClassList = document.getElementsByClassName("list-item") //return a HTMLCollection containg all items which have class name "list-item"
 
 //coverting HTMLCollection TO ARRAY (so we can apply loops)
-Array.from(tempClassList)
-const myConvertedArray = forArray(tempClassList)
+// Array.from(tempClassList)
+const myConvertedArray = Array.from(tempClassList)
 //now we can apply forEach,map etch properties
 
 

@@ -1,0 +1,50 @@
+<!-- An API is a way for one program to communicate with another program or service. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+//readyState
+// → tells the current state/progress of an XMLHttpRequest (XHR)
+
+// 5 readyState
+// 0 → UNSENT => XHR created, open() not called
+// 1 → OPENED. => open() has been called
+// 2 → HEADERS_RECEIVED  => Server has responded with headers
+// 3 → LOADING  => Response body is being received
+// 4 → DONE  => Request is completely finished
+
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl) 
+// open() has been called.
+// It prepares/configures the request,
+// but the request has NOT been sent yet.
+// Request is sent when xhr.send() is called.
+    xhr.send()  //request sent
+
+// onreadystatechange
+// → a function that runs whenever the readyState changes.
+xhr.onreadystatechange = function() {
+    console.log(xhr.readyState)
+    if(xhr.readyState === 4){
+        // const data = this.responseText  //typeof data => string (response jo url se aata hai vo string mein hota hai mostly)
+        const data = JSON.parse(this.responseText) //typeof data => object , converts a JSON string → JavaScript value/object.
+        console.log(data)
+        console.log(data.followers)
+    }
+};
+
+</script>
+</html>
