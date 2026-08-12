@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+
+    //lexical scoping
+
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret); //error
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username); //error
+
+    // closure : jbb koi function return krte hai toh uska pura lexical scope return hota hai.
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName; 
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    </script>
+    <script>
+        //real world problem on closure 
+        //problem : 500 colours in a array....click krgte hi background colour change hojaaye
+
+
+        //TOO LONGGGG
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }                               
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+        
+        //SOLVING USING CLOSURE
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}` //ais toh seedha execute hojaayega...hmein ek function return krwana hai pr
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange") //agr inner funtion nhi hota toh seedha execute hojaata vo...pr onclick toh ek function maangata hai ki kya krna hai jb button click ho toh
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>

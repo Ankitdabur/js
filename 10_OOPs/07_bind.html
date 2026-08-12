@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    //pehle hota tha ye bind ka use
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            //jaise hi button pr click kre 2 cheeze hojaaye
+            //reference mil jaaye button ka
+            //button click krne pr console log aajaye ki button clicked
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this)) //now we also attached object "this"..so we can access objects info inside handleClicked
+
+        }
+        handleClick(){
+            //without using bind here "this" refer to button
+            console.log("button clicked"); 
+            console.log(this.server); //refrence
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
